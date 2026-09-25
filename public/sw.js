@@ -1,5 +1,5 @@
 const CACHE = 'futurelab-public-v1'
-const SHELL = ['/', '/favicon.svg', '/icon-192.png', '/manifest.webmanifest']
+const SHELL = ['/', '/favicon.svg', '/icon-192.png', '/manifest.webmanifest', '/effects/site-effects.css', '/effects/site-effects.js']
 self.addEventListener('install', (event) =>
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL))),
 )

@@ -324,7 +324,7 @@ function Shell() {
           हिंदी पूर्वावलोकन · Detailed pages currently use English fallback.
         </div>
       )}
-      <main id="main">
+      <main id="main" data-page-key={loc.pathname}>
         <Suspense
           fallback={
             <div className="loading-page" role="status">

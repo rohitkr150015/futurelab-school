@@ -50,3 +50,7 @@ Run npm run typecheck and npm test. Browser tests are available through npm run 
 ## Assets and licenses
 
 [Asset sources](ASSETS.md) records supplied media provenance. Retain the license files included with the source and fonts. Original school photographs are illustrative; they are not a claim about a real campus.
+
+## Interaction effects
+
+A compact brand intro fades out after 540 ms without delaying page rendering or intercepting input. Clickable cards, image links, navigation, buttons and section headings receive subtle hover/focus/press or entrance feedback. A thin reading-progress line follows page scroll. Effects respect reduced-motion preferences; the static sites also honor their Motion toggle. The small dependency-free implementation is in `public/effects/`.
