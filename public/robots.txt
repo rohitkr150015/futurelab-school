@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Fictional preview. Configure approved content and a production domain before indexing.
