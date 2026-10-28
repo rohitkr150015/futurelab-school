@@ -9,7 +9,6 @@ import {
   Sparkles,
   Send,
   Globe2,
-  ChevronDown,
   ArrowRight,
   RotateCcw,
   WifiOff,
@@ -23,56 +22,11 @@ const Public = lazy(() => import('./Public'))
 const Admissions = lazy(() => import('./Admissions'))
 const Portal = lazy(() => import('./Portal'))
 const nav = [
-  {
-    name: 'Learn',
-    to: '/academics',
-    links: [
-      ['Learning pathways', '/academics'],
-      ['Our approach', '/about'],
-      ['Meet our educators', '/faculty'],
-      ['Resources & downloads', '/downloads'],
-    ],
-  },
-  {
-    name: 'Explore campus',
-    to: '/campus',
-    links: [
-      ['Campus explorer', '/campus'],
-      ['Plan your visit', '/visit'],
-      ['Transport & coverage', '/transport'],
-    ],
-  },
-  {
-    name: 'Student life',
-    to: '/school-life',
-    links: [
-      ['Life at FutureLab', '/school-life'],
-      ['The memory book', '/gallery'],
-      ['Clubs & passions', '/clubs'],
-      ['Student achievements', '/achievements'],
-    ],
-  },
-  {
-    name: 'Admissions',
-    to: '/admissions',
-    links: [
-      ['Your next chapter', '/admissions'],
-      ['Fee estimator', '/admissions/fees'],
-      ['Check eligibility', '/admissions/eligibility'],
-      ['Track application', '/admissions/track'],
-    ],
-  },
-  {
-    name: 'Community',
-    to: '/events',
-    links: [
-      ['What’s happening', '/events'],
-      ['Noticeboard', '/notices'],
-      ['Alumni stories', '/alumni'],
-      ['Join our team', '/careers'],
-      ['Get in touch', '/contact'],
-    ],
-  },
+  ['Learning', '/academics'],
+  ['Campus', '/campus'],
+  ['School life', '/school-life'],
+  ['Admissions', '/admissions'],
+  ['Contact', '/contact'],
 ]
 function ScrollManager() {
   const { pathname } = useLocation()
@@ -234,21 +188,6 @@ function Shell() {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
-      <div className="demo-bar">
-        <span>
-          <span className="status-dot" /> DEMO SCHOOL{' '}
-          <span className="demo-long">— sample data; no real submission or payment</span>
-        </span>
-        <div>
-          <Link to="/admissions">
-            A world of possibilities awaits <ArrowUpRight size={12} />
-          </Link>
-          <button onClick={() => setHindi(!hindi)} aria-label="Toggle Hindi language">
-            <Globe2 size={12} />
-            {hindi ? 'EN' : 'हिंदी'}
-          </button>
-        </div>
-      </div>
       {!online && (
         <div className="offline" role="status">
           <WifiOff size={16} />
@@ -259,22 +198,10 @@ function Shell() {
         <div className="nav-wrap">
           <Brand />
           <nav className="desktop-nav" aria-label="Main navigation">
-            {nav.map((n) => (
-              <div className="nav-item" key={n.name}>
-                <Link className={loc.pathname.startsWith(n.to) ? 'current' : ''} to={n.to}>
-                  {n.name}
-                  <ChevronDown size={12} />
-                </Link>
-                <div className="mega-menu">
-                  <span className="mono">A WORLD OF {n.name.toUpperCase()}</span>
-                  {n.links.map(([name, path]) => (
-                    <Link key={path} to={path}>
-                      {name}
-                      <ArrowUpRight size={16} />
-                    </Link>
-                  ))}
-                </div>
-              </div>
+            {nav.map(([name, path]) => (
+              <Link className={loc.pathname.startsWith(path) ? 'current' : ''} key={path} to={path}>
+                {name}
+              </Link>
             ))}
           </nav>
           <div className="nav-actions">
@@ -301,19 +228,11 @@ function Shell() {
         </div>
         {mobile && (
           <nav className="mobile-nav" aria-label="Mobile navigation">
-            {nav.map((n) => (
-              <details key={n.name}>
-                <summary>
-                  {n.name}
-                  <ChevronDown size={17} />
-                </summary>
-                {n.links.map(([name, path]) => (
-                  <Link key={path} to={path}>
-                    {name}
-                    <ArrowUpRight size={16} />
-                  </Link>
-                ))}
-              </details>
+            {nav.map(([name, path]) => (
+              <Link key={path} to={path}>
+                {name}
+                <ArrowUpRight size={16} />
+              </Link>
             ))}
             <ButtonLink to="/admissions/apply">Start your application</ButtonLink>
           </nav>

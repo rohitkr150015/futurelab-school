@@ -16,7 +16,7 @@ export default function Campus3D() {
       return
     }
     const scene = new THREE.Scene()
-    scene.background = new THREE.Color('#e7eeed')
+    scene.background = new THREE.Color('#fff7ef')
     const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100)
     camera.position.set(12, 12, 14)
     const controls = new OrbitControls(camera, renderer.domElement)
@@ -43,16 +43,16 @@ export default function Campus3D() {
       scene.add(mesh)
       return mesh
     }
-    box(15, 0.2, 12, 0, 0, '#c8ddc8')
-    box(4, 2.5, 2.8, -3, -2, '#f8f5eb')
-    box(3, 1.7, 2.5, 2, -2, '#e6c39a')
-    box(3, 1.5, 2.5, -3, 2, '#ffffff')
-    box(2.5, 2, 2, 3, 2, '#9baeba')
-    box(3, 0.3, 3, 0, 1.6, '#91c696')
-    box(1, 0.22, 12, 0, 0, '#f6f0e3')
+    box(15, 0.2, 12, 0, 0, '#f3d5b5')
+    box(4, 2.5, 2.8, -3, -2, '#fff7ef')
+    box(3, 1.7, 2.5, 2, -2, '#da8224')
+    box(3, 1.5, 2.5, -3, 2, '#fffbf7')
+    box(2.5, 2, 2, 3, 2, '#bc8a5f')
+    box(3, 0.3, 3, 0, 1.6, '#bc8a5f')
+    box(1, 0.22, 12, 0, 0, '#fff7ef')
     for (let i = 0; i < 4; i++) {
-      box(0.5, 0.6, 0.04, -4.2 + i * 0.8, -0.58, '#52b8c3')
-      box(0.5, 0.6, 0.04, -4.2 + i * 0.8, 3.26, '#52b8c3')
+      box(0.5, 0.6, 0.04, -4.2 + i * 0.8, -0.58, '#da8224')
+      box(0.5, 0.6, 0.04, -4.2 + i * 0.8, 3.26, '#da8224')
     }
     for (const [x, z] of [
       [-6, -4],
@@ -61,9 +61,9 @@ export default function Campus3D() {
       [5, -4],
       [-5, 4],
     ]) {
-      box(0.14, 0.8, 0.14, x, z, '#946d4f')
+      box(0.14, 0.8, 0.14, x, z, '#775232')
       const geo = new THREE.SphereGeometry(0.6, 12, 12),
-        mat = new THREE.MeshStandardMaterial({ color: '#40866a' })
+        mat = new THREE.MeshStandardMaterial({ color: '#8b5e34' })
       geometries.push(geo)
       materials.push(mat)
       const tree = new THREE.Mesh(geo, mat)

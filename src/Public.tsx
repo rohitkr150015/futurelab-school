@@ -447,19 +447,19 @@ function Campus({ slug }: { slug?: string }) {
                   >
                     <defs>
                       <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-                        <path d="M30 0H0V30" fill="none" stroke="#d6e0db" strokeWidth=".5" />
+                        <path d="M30 0H0V30" fill="none" stroke="#f3d5b5" strokeWidth=".5" />
                       </pattern>
                     </defs>
                     <rect width="700" height="470" fill="url(#grid)" />
-                    <path d="M350 470V80 M90 242H610" stroke="#fff" strokeWidth="37" fill="none" />
+                    <path d="M350 470V80 M90 242H610" stroke="#fffbf7" strokeWidth="37" fill="none" />
                     <rect
                       x="140"
                       y="96"
                       width="180"
                       height="110"
                       rx="9"
-                      fill="#b6cbca"
-                      stroke="#799693"
+                      fill="#bc8a5f"
+                      stroke="#8b5e34"
                     />
                     <rect
                       x="390"
@@ -467,8 +467,8 @@ function Campus({ slug }: { slug?: string }) {
                       width="160"
                       height="113"
                       rx="9"
-                      fill="#ccdac8"
-                      stroke="#799693"
+                      fill="#f3d5b5"
+                      stroke="#8b5e34"
                     />
                     <rect
                       x="110"
@@ -476,8 +476,8 @@ function Campus({ slug }: { slug?: string }) {
                       width="175"
                       height="97"
                       rx="9"
-                      fill="#e4d5bd"
-                      stroke="#b7a585"
+                      fill="#da8224"
+                      stroke="#8b5e34"
                     />
                     <rect
                       x="423"
@@ -485,19 +485,19 @@ function Campus({ slug }: { slug?: string }) {
                       width="148"
                       height="100"
                       rx="9"
-                      fill="#c2cddc"
-                      stroke="#879eb7"
+                      fill="#f3d5b5"
+                      stroke="#8b5e34"
                     />
                     <ellipse
                       cx="345"
                       cy="245"
                       rx="62"
                       ry="50"
-                      fill="#9bbe9b"
-                      stroke="#709670"
+                      fill="#bc8a5f"
+                      stroke="#775232"
                       strokeDasharray="4 5"
                     />
-                    <g fill="#759d81">
+                    <g fill="#8b5e34">
                       {[
                         [85, 65],
                         [580, 110],
@@ -509,7 +509,7 @@ function Campus({ slug }: { slug?: string }) {
                         <circle key={x} cx={x} cy={y} r="19" />
                       ))}
                     </g>
-                    <text x="368" y="446" fill="#456057" fontSize="13">
+                    <text x="368" y="446" fill="#492b0c" fontSize="13">
                       MAIN ENTRANCE + PARKING
                     </text>
                   </svg>

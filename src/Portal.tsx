@@ -119,18 +119,18 @@ function Chart({ child = 'aarav', metric = 'Science' }: { child?: string; metric
           <AreaChart data={data} margin={{ left: -25, right: 12, top: 16, bottom: 0 }}>
             <defs>
               <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#20d9ec" stopOpacity={0.35} />
-                <stop offset="100%" stopColor="#20d9ec" stopOpacity={0} />
+                <stop offset="0%" stopColor="#da8224" stopOpacity={0.35} />
+                <stop offset="100%" stopColor="#da8224" stopOpacity={0} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 5" vertical={false} stroke="#e5e9ed" />
+            <CartesianGrid strokeDasharray="3 5" vertical={false} stroke="#fff7ef" />
             <XAxis dataKey="month" tickLine={false} axisLine={false} fontSize={12} />
             <YAxis domain={[0, 100]} tickLine={false} axisLine={false} fontSize={12} />
             <Tooltip />
             <Area
               type="monotone"
               dataKey={metric}
-              stroke="#087d91"
+              stroke="#8b5e34"
               fill="url(#chartFill)"
               strokeWidth={3}
               animationDuration={300}
@@ -1598,7 +1598,7 @@ function Admin({ page }: { page: string }) {
               <XAxis dataKey="name" fontSize={11} />
               <YAxis fontSize={12} />
               <Tooltip />
-              <Bar dataKey="value" fill="#087d91" radius={[5, 5, 0, 0]} animationDuration={300} />
+              <Bar dataKey="value" fill="#8b5e34" radius={[5, 5, 0, 0]} animationDuration={300} />
             </BarChart>
           </ResponsiveContainer>
           <table>
